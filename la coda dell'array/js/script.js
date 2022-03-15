@@ -35,3 +35,16 @@ if (arrayLength > 0) {
 }
 
 console.log(numbers);
+
+// Super Extra Bonus
+// numero di elementi da estrarre dal fondo dell'array
+let nCoda = prompt("Quanti elementi vuoi estrarre dalla fine dell'array?");
+let lastNumbers = document.getElementById("lastNumbers");
+
+if ((nCoda > 0) && (nCoda <= numbers.length)) {
+    for (i=numbers.length-nCoda; i<numbers.length; i++) {
+        lastNumbers.innerHTML += `<li>${numbers[i]}</li>`;
+    }
+} else {
+    alert("Il numero di elementi da estrarre non è valido.");
+}
