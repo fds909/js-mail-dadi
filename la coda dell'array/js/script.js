@@ -13,7 +13,25 @@
 */
 
 let colori = ["bianco", "nero", "giallo", "verde", "rosso", "blu", "viola", "grigio"];
+let coda = document.getElementById("coda");
 
-if (colori.length >= 5) {
-
+for (let i=colori.length - 5; i<colori.length; i++) {
+    // se il ciclo parte da indice negativo non fa nulla e continua a incrementare l'indice
+    if (i >= 0) {
+        coda.innerHTML += `<li>${colori[i]}</li>`;
+    }
 }
+
+//Extra Bonus
+let numbers = [];
+let arrayLength = prompt("Quanti elementi avrà l'array?");
+
+if (arrayLength > 0) {
+    for (let i=0; i<arrayLength; i++) {
+        numbers[i] = Math.floor(Math.random() * 100);
+    }
+} else {
+    alert("Inserire un numero maggiore di 0");
+}
+
+console.log(numbers);
