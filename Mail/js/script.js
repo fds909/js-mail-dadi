@@ -13,7 +13,7 @@ let isInGranted = false;
 
 // controllo la presenza della mail nella lista delle mail accettate
 for (let i = 0; i < grantedEmails.length; i++) {
-    if (email === grantedEmails[i]) {
+    if (email.toLowerCase() === grantedEmails[i].toLowerCase()) {
         isInGranted = true;
         break;
     }
